@@ -3,20 +3,21 @@ import { useCallback, useState } from "react";
 import "./Input.css";
 
 const Input = (props) => {
-  const [value, setValue] = useState("Jaded Pixel");
+  const [value, setValue] = useState("your quote");
 
   const handleChange = useCallback((newValue) => setValue(newValue), []);
   props.input(value);
   return (
     <>
+    <br/><br/>
       <TextField
-        label="Store name"
+        label="Your Quote"
         value={value}
         onChange={handleChange}
         autoComplete="off"
       />
       <br />
-      <span>Name: {value}</span>
+      {/* <span>Name: {value}</span> */}
       <br />
     </>
   );

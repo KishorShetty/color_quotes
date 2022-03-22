@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Color from "./components/input_color/Color";
 import Input from "./components/input_color/Input";
@@ -14,19 +14,19 @@ function App() {
 
   const getColorCode = (color) => {
     setInputColor(color);
-    console.log(color);
+    // console.log(color);
   };
 
   return (
     <>
       <div className="App">
-        Hello App
+        Color Quote
         <Input input={getInputText} />
         <Color colorCode={getColorCode} />
-        <Png color={inputColor}/>
+        <Png color={inputColor} input={inputText} />
       </div>
-      <span>text inside App: {inputText}</span>
-      {`hue: ${inputColor.hue} brightness: ${inputColor.brightness} saturation: ${inputColor.saturation} alpha: ${inputColor.alpha}`}
+      {/* <span>text inside App: {inputText}</span> */}
+      {/* {`hue: ${inputColor.hue} brightness: ${inputColor.brightness} saturation: ${inputColor.saturation} alpha: ${inputColor.alpha}`} */}
     </>
   );
 }

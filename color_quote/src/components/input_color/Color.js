@@ -18,10 +18,10 @@ const Color = (props) => {
       <br />
       <ColorPicker onChange={setColor} color={color} allowAlpha />
       <br />
-      <span>
+      {/* <span>
         color:{" "}
         {`hue: ${color.hue} brightness: ${color.brightness} saturation: ${color.saturation} alpha: ${color.alpha}`}
-      </span>
+      </span> */}
     </>
   );
 };
