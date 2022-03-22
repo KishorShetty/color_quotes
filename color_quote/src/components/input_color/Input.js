@@ -2,11 +2,11 @@ import { TextField } from "@shopify/polaris";
 import { useCallback, useState } from "react";
 import "./Input.css";
 
-const Input = () => {
+const Input = (props) => {
   const [value, setValue] = useState("Jaded Pixel");
 
   const handleChange = useCallback((newValue) => setValue(newValue), []);
-
+  props.input(value);
   return (
     <>
       <TextField

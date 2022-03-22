@@ -2,13 +2,16 @@ import { ColorPicker } from "@shopify/polaris";
 import { useState } from "react";
 import "./Color.css";
 
-function Color() {
+const Color = (props) => {
   const [color, setColor] = useState({
     hue: 300,
     brightness: 1,
     saturation: 0.7,
     alpha: 0.7,
   });
+
+  // props.colorCode(`${color.alpha} ${color.brightness}`);
+  props.colorCode(color);
 
   return (
     <>
@@ -21,6 +24,6 @@ function Color() {
       </span>
     </>
   );
-}
+};
 
 export default Color;
