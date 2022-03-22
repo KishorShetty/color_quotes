@@ -22,6 +22,7 @@ function App() {
       <div className="App">
         Color Quote
         <Input input={getInputText} />
+        {/* 100 chars long */}
         <Color colorCode={getColorCode} />
         <Png color={inputColor} input={inputText} />
       </div>

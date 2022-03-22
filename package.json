@@ -4,7 +4,8 @@
   "description": "**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**",
   "main": "backendserver.js",
   "scripts": {
-    "test": "'"
+    "test": "'",
+    "start": "node backend/server.js"
   },
   "repository": {
     "type": "git",
