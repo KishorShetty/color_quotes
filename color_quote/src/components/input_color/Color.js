@@ -10,7 +10,17 @@ function Color() {
     alpha: 0.7,
   });
 
-  return <ColorPicker onChange={setColor} color={color} allowAlpha />;
+  return (
+    <>
+      <br />
+      <ColorPicker onChange={setColor} color={color} allowAlpha />
+      <br />
+      <span>
+        color:{" "}
+        {`hue: ${color.hue} brightness: ${color.brightness} saturation: ${color.saturation} alpha: ${color.alpha}`}
+      </span>
+    </>
+  );
 }
 
 export default Color;

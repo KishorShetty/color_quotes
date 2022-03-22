@@ -8,12 +8,17 @@ const Input = () => {
   const handleChange = useCallback((newValue) => setValue(newValue), []);
 
   return (
-    <TextField
-      label="Store name"
-      value={value}
-      onChange={handleChange}
-      autoComplete="off"
-    />
+    <>
+      <TextField
+        label="Store name"
+        value={value}
+        onChange={handleChange}
+        autoComplete="off"
+      />
+      <br />
+      <span>Name: {value}</span>
+      <br />
+    </>
   );
 };
 
