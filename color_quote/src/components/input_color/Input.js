@@ -1,16 +1,20 @@
-import { ColorPicker } from "@shopify/polaris";
-import { useState } from "react";
+import { TextField } from "@shopify/polaris";
+import { useCallback, useState } from "react";
 import "./Input.css";
 
-function Input() {
-  const [color, setColor] = useState({
-    hue: 300,
-    brightness: 1,
-    saturation: 0.7,
-    alpha: 0.7,
-  });
+const Input = () => {
+  const [value, setValue] = useState("Jaded Pixel");
 
-  return <ColorPicker onChange={setColor} color={color} allowAlpha />;
-}
+  const handleChange = useCallback((newValue) => setValue(newValue), []);
+
+  return (
+    <TextField
+      label="Store name"
+      value={value}
+      onChange={handleChange}
+      autoComplete="off"
+    />
+  );
+};
 
 export default Input;
