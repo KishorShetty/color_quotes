@@ -13,7 +13,9 @@ const Png = ({ color, input }) => {
         }}
       >
     
-        <span className="quote">{input}</span>
+        <span className="quote" style={{color:`hsla(${color.hue},${color.saturation * 100}%,${
+            color.brightness * 100
+          }%,${color.alpha})`}}>{input}</span>
       </div>
     </>
   );
