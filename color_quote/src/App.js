@@ -23,7 +23,7 @@ function App() {
         Hello App
         <Input input={getInputText} />
         <Color colorCode={getColorCode} />
-        <Png />
+        <Png color={inputColor}/>
       </div>
       <span>text inside App: {inputText}</span>
       {`hue: ${inputColor.hue} brightness: ${inputColor.brightness} saturation: ${inputColor.saturation} alpha: ${inputColor.alpha}`}
