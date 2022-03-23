@@ -29,14 +29,14 @@ app.post("/quoteToPng", (req, res) => {
       const uri = await textToImage.generate(quote, {
         fontFamily:'lato',
         fontSize: 50,
-        lineHeight: 50,
+        lineHeight: 70,
         maxWidth:1000,
         customHeight:500,
         bgColor: "black",
         margin: 5,
         verticalAlign: 'center',
         textAlign:'center',
-        textColor: "white",
+        textColor: "hsla(9, 100%, 64%, 1)",
       });
       // return uri;
       //   console.log(uri);
