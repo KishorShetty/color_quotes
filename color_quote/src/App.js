@@ -14,19 +14,20 @@ function App() {
 
   const getColorCode = (color) => {
     setInputColor(color);
-    console.log(color);
+    // console.log(color);
   };
 
   return (
     <>
       <div className="App">
-        Hello App
+        Color Quote
         <Input input={getInputText} />
+        {/* 100 chars long */}
         <Color colorCode={getColorCode} />
-        <Png color={inputColor}/>
+        <Png color={inputColor} input={inputText} />
       </div>
-      <span>text inside App: {inputText}</span>
-      {`hue: ${inputColor.hue} brightness: ${inputColor.brightness} saturation: ${inputColor.saturation} alpha: ${inputColor.alpha}`}
+      {/* <span>text inside App: {inputText}</span> */}
+      {/* {`hue: ${inputColor.hue} brightness: ${inputColor.brightness} saturation: ${inputColor.saturation} alpha: ${inputColor.alpha}`} */}
     </>
   );
 }

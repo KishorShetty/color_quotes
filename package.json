@@ -4,7 +4,9 @@
   "description": "**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**",
   "main": "backendserver.js",
   "scripts": {
-    "test": "'"
+    "test": "'",
+    "start": "node backend/server.js",
+    "heroku-postbuild":"npm install --prefix color_quote && npm run build --prefix color_quote"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,10 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "mongoose": "^6.2.7"
+    "mongoose": "^6.2.7",
+    "text-to-image": "^5.2.0"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
