@@ -6,7 +6,7 @@
   "scripts": {
     "test": "'",
     "start": "node backend/server.js",
-    "heroku-postbuild":"npm install --prefix input_color && npm run build --prefix input_color"
+    "heroku-postbuild":"npm install --prefix color_quote && npm run build --prefix color_quote"
   },
   "repository": {
     "type": "git",

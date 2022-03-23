@@ -5,11 +5,17 @@ import "./Input.css";
 const Input = (props) => {
   const [value, setValue] = useState("your quote");
 
-  const handleChange = useCallback((newValue) => setValue(newValue), []);
+  const handleChange = useCallback((newValue) => {
+    if (newValue.length <= 100) {
+      setValue(newValue);
+    }
+  }, []);
+
   props.input(value);
   return (
     <>
-    <br/><br/>
+      <br />
+      <br />
       <TextField
         label="Your Quote"
         value={value}
@@ -18,6 +24,7 @@ const Input = (props) => {
       />
       <br />
       {/* <span>Name: {value}</span> */}
+      {/* {console.log(value.length)} */}
       <br />
     </>
   );
