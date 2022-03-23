@@ -36,7 +36,9 @@ app.post("/quoteToPng", (req, res) => {
         margin: 5,
         verticalAlign: 'center',
         textAlign:'center',
-        textColor: "hsla(9, 100%, 64%, 1)",
+        textColor: `hsla(${req.body.color.hue},${req.body.color.saturation * 100}%,${
+            req.body.color.brightness * 100
+          }%,${req.body.color.alpha})`,
       });
       // return uri;
       //   console.log(uri);
