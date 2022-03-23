@@ -5,7 +5,8 @@
   "main": "backendserver.js",
   "scripts": {
     "test": "'",
-    "start": "node backend/server.js"
+    "start": "node backend/server.js",
+    "heroku-postbuild":"npm install --prefix input_color && npm run build --prefix input_color"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
     "express": "^4.17.3",
     "mongoose": "^6.2.7",
     "text-to-image": "^5.2.0"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }

@@ -11,11 +11,11 @@ app.use(cors());
 // app.use("/api/v1", user);
 
 // for Hosting on heroku
-// app.use(express.static(path.join(__dirname,"../color_quote/build")));
-// app.get("*",(req,res)=>{
-//     res.sendFile(path.join(__dirname,"../color_quote/build/index.html"));
-// })
-//for Heroku
+app.use(express.static(path.join(__dirname,"../color_quote/build")));
+app.get("*",(req,res)=>{
+    res.sendFile(path.join(__dirname,"../color_quote/build/index.html"));
+})
+// for Heroku
 
 
 module.exports = app;

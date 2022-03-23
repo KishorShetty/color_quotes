@@ -3,12 +3,13 @@ import axios from "axios";
 import "./Png.css";
 
 const Png = ({ color, input }) => {
-  const [pngData, setPngData] = useState();
+  const [pngData] = useState();
   const [imageData, setImageData] = useState();
+  // https://4000-bahejav-appattic-kg9sdfgbpf0.ws-us38.gitpod.io/quoteToPng
   useEffect(() => {
     async function sendData() {
       const imageData = await axios.post(
-        `https://4000-bahejav-appattic-kg9sdfgbpf0.ws-us38.gitpod.io/quoteToPng`,
+        `/quoteToPng`,
         { color, input }
       );
       // setPngData(data);
@@ -40,7 +41,7 @@ const Png = ({ color, input }) => {
         >
           {input}
         </span> */}
-        <img src={imageData} />
+        <img src={imageData} alt="pic"/>
       </div>
     </>
   );
