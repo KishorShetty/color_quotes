@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Color from "./components/input_color/Color";
 import Input from "./components/input_color/Input";
