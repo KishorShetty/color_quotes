@@ -13,7 +13,7 @@ const Png = ({ color, input }) => {
         { color, input }
       );
       // setPngData(data);
-      // console.log(imageData);
+      console.log(imageData);
       // console.log(imageData.data.image);
       setImageData(imageData.data.image);
     }

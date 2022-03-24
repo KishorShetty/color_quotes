@@ -4,19 +4,18 @@ import "./Color.css";
 
 const Color = (props) => {
   const [color, setColor] = useState({
-    hue: 300,
-    brightness: 1,
-    saturation: 0.7,
-    alpha: 0.7,
+    hue: 0,
+    brightness: 0.9375,
+    saturation: 0.93125,
+    alpha: 1,
   });
-
   // props.colorCode(`${color.alpha} ${color.brightness}`);
   props.colorCode(color);
 
   return (
     <>
       <br />
-      <ColorPicker onChange={setColor} color={color} allowAlpha />
+      <ColorPicker onChange={setColor} color={color} allowAlpha={true} />
       <br />
       {/* <span>
         color:{" "}
