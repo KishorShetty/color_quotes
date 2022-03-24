@@ -27,7 +27,7 @@ app.post("/quoteToPng", (req, res) => {
 
     async function generatePng(quote) {
       const uri = await textToImage.generate(quote, {
-        fontFamily:'lato',
+        fontFamily: 'Lato, italic',
         fontSize: 50,
         lineHeight: 70,
         maxWidth:1000,
@@ -37,7 +37,7 @@ app.post("/quoteToPng", (req, res) => {
         verticalAlign: 'center',
         textAlign:'center',
         textColor: `hsla(${req.body.color.hue},${req.body.color.saturation * 100}%,${
-            req.body.color.brightness * 100
+            req.body.color.brightness * 50
           }%,${req.body.color.alpha})`,
       });
       // return uri;
