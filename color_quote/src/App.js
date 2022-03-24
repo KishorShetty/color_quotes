@@ -9,12 +9,16 @@ function App() {
   const [inputColor, setInputColor] = useState({});
 
   const getInputText = (text) => {
-    setInputText(text);
+    // setInputText(text);
+    //*****WRAP useState VARIABLE INSIDE setTimeout WITH 0 TIME AS BELOW.*****
+    setTimeout(() => setInputText(text), 0);
   };
 
   const getColorCode = (color) => {
-    setInputColor(color);
+    // setInputColor(color);
     // console.log(color);
+    //*****WRAP useState VARIABLE INSIDE setTimeout WITH 0 TIME AS BELOW.*****
+    setTimeout(() => setInputColor(color), 0);
   };
 
   return (
