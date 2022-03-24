@@ -9,7 +9,7 @@ const Png = ({ color, input }) => {
   useEffect(() => {
     async function sendData() {
       const imageData = await axios.post(
-        `https://4000-bahejav-appattic-kg9sdfgbpf0.ws-us38.gitpod.io/quoteToPng`,
+        `/quoteToPng`,
         { color, input }
       );
       // setPngData(data);
