@@ -32,6 +32,7 @@ function App() {
       </div>
       {/* <span>text inside App: {inputText}</span> */}
       {/* {`hue: ${inputColor.hue} brightness: ${inputColor.brightness} saturation: ${inputColor.saturation} alpha: ${inputColor.alpha}`} */}
+<a href="kishor.mp4">video</a>
     </>
   );
 }
